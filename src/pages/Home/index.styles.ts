@@ -5,6 +5,7 @@ const styles = StyleSheet.create({
   basicWeatherContainer: {
     flex: 2,
     backgroundColor: "red",
+    position: "relative",
   },
   searchBarContainer: { flex: 2, backgroundColor: "green" },
   advanceInfoContainer: { flex: 1, backgroundColor: "blue" },
