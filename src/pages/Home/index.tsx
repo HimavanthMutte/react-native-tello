@@ -6,13 +6,13 @@ export default function Home() {
   return (
     <View style={{ flex: 1 }}>
       <View style={styles.basicWeatherContainer}>
-        <Text>Basic Weather Info</Text>
+        <Text style={styles.text}>Basic Weather Info</Text>
       </View>
       <View style={styles.searchBarContainer}>
-        <Text>Search Bar</Text>
+        <Text style={styles.text}>Search Bar</Text>
       </View>
       <View style={styles.advanceInfoContainer}>
-        <Text>Advance Info</Text>
+        <Text style={styles.text}>Advance Info</Text>
       </View>
     </View>
   );

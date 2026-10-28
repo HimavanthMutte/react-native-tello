@@ -4,11 +4,13 @@ const styles = StyleSheet.create({
   homeContainer: {},
   basicWeatherContainer: {
     flex: 2,
-    backgroundColor: "red",
-    position: "relative",
   },
-  searchBarContainer: { flex: 2, backgroundColor: "green" },
-  advanceInfoContainer: { flex: 1, backgroundColor: "blue" },
+  text: {
+    fontSize: 30,
+    color: "white",
+  },
+  searchBarContainer: { flex: 2 },
+  advanceInfoContainer: { flex: 1 },
 });
 
 export default styles;
