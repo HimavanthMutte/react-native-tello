@@ -1,0 +1,9 @@
+import axios from "axios";
+export class MeteoAPI {
+  static async fetchWeatherByCoords(coords: { lat: number; lon: number }) {
+    const data = await axios.get(
+      `https://api.open-meteo.com/v1/forecast?latitude=${coords.lat}&longitude=${coords.lon}&daily=weathercode,temperature_2m_max,sunrise,sunset,windspeed_10m_max&timezone=auto&current_weather=true`,
+    );
+    return data;
+  }
+}
