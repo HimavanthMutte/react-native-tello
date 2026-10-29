@@ -1,4 +1,5 @@
 import { MeteoAPI } from "@/api/meteo";
+import { useFonts } from "expo-font";
 import * as Location from "expo-location";
 import { useEffect, useState } from "react";
 import { Image, View } from "react-native";
@@ -15,6 +16,9 @@ type Coords = {
 export default function App() {
   const [coordinates, setCoordinates] = useState<Coords>();
   const [weather, setWeather] = useState<any>();
+  const [isLoaded, error] = useFonts({
+    "Alata-Regular": require("../../assets/Alata-Regular.ttf"),
+  });
   useEffect(() => {
     async function getCoordinates() {
       const permissions = await Location.requestForegroundPermissionsAsync();
@@ -51,7 +55,7 @@ export default function App() {
       <SafeAreaView style={{ flex: 1 }}>
         <Image source={Background} style={styles.backgroundImageContainer} />
         <View style={styles.imageOverlay} />
-        <Home />
+        {isLoaded && <Home />}
       </SafeAreaView>
     </SafeAreaProvider>
   );
