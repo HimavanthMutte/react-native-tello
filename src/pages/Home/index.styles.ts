@@ -5,10 +5,6 @@ const styles = StyleSheet.create({
   basicWeatherContainer: {
     flex: 2,
   },
-  text: {
-    fontSize: 30,
-    color: "white",
-  },
   searchBarContainer: { flex: 2 },
   advanceInfoContainer: { flex: 1 },
 });
